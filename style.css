@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.nav {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.nav .up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.nav .up i{
+    color: #ddd;
+    transition: .3s;
+    margin-right: 15px;
+}
+
+.nav .up i:hover {
+    color: #FAB700;
+}
+
+.nav .right button {
+    padding: 5px 15px;
+    background-color: #FAB700;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+}
+
+.nav .down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.nav .down .right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav .down .right ul li:hover {
+    cursor: pointer;
+    color: #fab700;
+}
+
+.hero {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/bg.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: black;
+    background-color: #FAB700;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.hero p {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fab700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.hero button:hover {
+    background-color: #FAB700;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.services .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid black;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.services .service p {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: -1px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .project {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.projects .project .project-card {
+    height: 30vh;
+    width: 33.3%;
+    position: relative;
+}
+
+.projects .project .project-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.projects .project .project-card .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FAB700;
+    opacity: 0;
+    transition: .3s;
+}
+
+.projects .project .project-card .text h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.projects .project .project-card .text p {
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.projects .project .project-card:hover .text {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.team {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team .members {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.team .members .member .image {
+    position: relative;
+}
+
+.team .members .member .image img {
+    height: 100%;
+    width: 100%;
+}
+
+.team .members .member .container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FAB700;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team .members .member .image:hover .container {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.team .members .member h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team .members .member p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.properties {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FAB700;
+    height: 40vh;
+    width: 100%;
+}
+
+.unique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.unique .cards {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+    padding: 40px;
+}
+
+.unique .cards .card {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.unique .cards .card .up {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.persons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 150px 100px;
+    background-color: #f5f1f1;
+}
+
+.persons .person {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.persons .person:hover {
+    background-color: white;
+    border: 2px solid white;
+    cursor: grab;
+}
+
+.persons .person:hover  h3 {
+    color: #FAB700;
+}
+
+.persons .person p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.brands {
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.brands img {
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.brands img:hover{
+    opacity: 1;
+}
+
+.footer {
+    background-color: #222222;
+    padding: 100px 0;
+}
+
+.footer h1 {
+    color: white;
+    font-size: 25px;
+    margin: 20px 0;
+    letter-spacing: -1.5px;
+}
+
+.footer p {
+    color: #858181;
+    letter-spacing: -1px;
+}
+
+.footer .up {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer .up .section2 span {
+    color: #FAB700;
+    font-size: 20px;
+}
+
+.footer .up .section3 fieldset {
+    border: none;
+    outline: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.footer .up .section3 fieldset input {
+    width: 95%;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+}
+
+.footer .up .section3 fieldset span {
+    background-color: #FAB700;
+    padding: 8px 13px;
+    margin: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.footer .down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    margin-top: 100px;
+}
+
+.footer .down .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .down .icons span {
+    color: white;
+    background-color: black;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer .down .icons span:hover {
+    background-color: #FAB700;
+    color: black;
+}
